@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Budget Planner</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="auth">
+    <div class="container">
+        <h1>Welcome to Budget Planner</h1>
+        <% if (message.length > 0) { %>
+            <div class="alert alert-danger"><%= message %></div>
+        <% } %>
+        <div class="btn-group">
+            <a href="/login"><button>Login</button></a>
+            <a href="/signup"><button>Sign Up</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

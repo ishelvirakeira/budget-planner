@@ -1,0 +1,155 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: rgb(235, 226, 217); 
+  color: rgb(39, 61, 61);
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgb(95, 179, 137);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px LightGray;
+}
+
+
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: rgb(129, 119, 194);
+}
+
+.alert {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.alert-danger {
+  background-color: LightCoral;
+  color: White;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+  padding: 0.5rem;
+  border: 2px solid rgb(113, 177, 177);
+  border-radius: 5px;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;/*https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/outline*/
+  border-color: rgb(82, 112, 95);
+}
+
+button {
+  padding: 0.7rem;
+  background-color: rgb(107, 129, 117);
+  color: White;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgb(123, 202, 157);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-group button {
+  flex: 1;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;/*https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-collapse*/
+  margin-top: 1rem;
+}
+
+table th, table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid LightGray;
+  text-align: left;
+}
+
+table th {
+  background-color: rgb(139, 201, 139);
+}
+
+table tr:hover {
+  background-color: rgb(168, 228, 198);
+}
+
+
+a {
+  color: rgb(147, 134, 223);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid LightGray;
+}
+
+.expense-item button {
+  background-color: rgb(181, 135, 135);
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+.expense-item button:hover {
+  background-color: Red;
+}
+
+/*responsiveness*/
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

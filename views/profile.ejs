@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Budget Planner Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+  <h1>Welcome, <%= user.local.email %>!</h1>
+  <form action="/add-expense" method="POST">
+    <input type="text" name="category" placeholder="Category" required>
+    <input type="number" name="amount" placeholder="Amount" required>
+    <input type="text" name="note" placeholder="Note">
+    <button type="submit">Add Expense</button>
+  </form>
+<!--worked on this with housemates-->
+  <ul>
+    <% expenses.forEach(e => { %>
+      <li>
+        <span><%= e.category %></span> — $<%= e.amount %> 
+        <form method="POST" action="/delete-expense/<%= e._id %>?_method=DELETE">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+
+  <a href="/logout">Logout</a>
+</body>
+</html>
